@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 //                finish();
 
                 // 显式启动SecondActivity
-//                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 // 隐式启动SecondActivity
 //                Intent intent = new Intent("com.example.activitytest.ACTION_START");
 //                intent.addCategory("com.example.activitytest.MY_CATEGORY");
@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
 //                Intent intent = new Intent(Intent.ACTION_VIEW);
 //                intent.setData(Uri.parse("http://www.baidu.com"));
 
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:10086"));
+//                Intent intent = new Intent(Intent.ACTION_DIAL);
+//                intent.setData(Uri.parse("tel:10086"));
                 startActivity(intent);
             }
         });
@@ -62,5 +62,11 @@ public class MainActivity extends AppCompatActivity {
             default:
         }
         return true;
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        MainActivity.this.finish();
     }
 }
