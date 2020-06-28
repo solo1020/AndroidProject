@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".BrowserActivity">
-            <intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:scheme="http" />
@@ -25,6 +25,7 @@
 
         <activity android:name=".SecondActivity">
             <intent-filter>
+<!--                //指定当前活动可以响应com.example.activitytest.ACTION_START 该action-->
                 <action android:name="com.example.activitytest.ACTION_START" />
 
                 <category android:name="android.intent.category.DEFAULT" />

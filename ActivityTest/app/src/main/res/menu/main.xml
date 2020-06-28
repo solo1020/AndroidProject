@@ -9,4 +9,15 @@
         android:id="@+id/remove_item"
         android:title="Remove" />
 
+    <item
+        android:id="@+id/hideToIntent"
+        android:title="隐式intent" />
+
+    <item
+        android:id="@+id/openBrowser"
+        android:title="浏览器" />
+
+    <item
+        android:id="@+id/callPhoneNumber"
+        android:title="打电话" />
 </menu>

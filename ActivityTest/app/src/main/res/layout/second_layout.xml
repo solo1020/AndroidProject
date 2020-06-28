@@ -27,4 +27,11 @@
         android:text="登录"
         />
 
+    <Button
+        android:id="@+id/returnActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="销毁当前活动并传递数据给前一活动"
+        />
+
 </LinearLayout>
