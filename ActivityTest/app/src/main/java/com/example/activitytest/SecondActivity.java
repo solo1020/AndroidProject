@@ -29,8 +29,8 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_layout);
         Intent intent = getIntent();
-        String data = intent.getStringExtra("extra_data");
-        Log.d(TAG,data);
+//        String data = intent.getStringExtra("extra_data");
+//        Log.d(TAG,data);
 
         Button btnLogin = (Button)findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {

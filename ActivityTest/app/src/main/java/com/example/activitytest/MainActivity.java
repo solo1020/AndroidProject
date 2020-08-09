@@ -12,10 +12,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static String TAG = "MainActivity";
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,18 @@ public class MainActivity extends AppCompatActivity {
             String tempData = savedInstanceState.getString("data_key");
             Log.d(TAG,tempData);
         }
+
+        // 点击切换图片资源
+        imageView = (ImageView)findViewById(R.id.image_view);
+        Button button = (Button)findViewById(R.id.changeImg);
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                imageView.setImageResource(R.drawable.img_2);
+            }
+        });
+
 
         Button button1 = (Button)findViewById(R.id.button_1);
         // 绑定按钮监听事件
@@ -68,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             case 1:
                 if (resultCode == RESULT_OK) {
                     String returnData = data.getStringExtra("data_return");
+                    Toast.makeText(this, returnData,Toast.LENGTH_SHORT).show();
                     Log.d(TAG, returnData);
                 }
                 break;

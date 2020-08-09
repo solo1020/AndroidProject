@@ -27,5 +27,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button 1" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_1"
+        />
+
+    <Button
+        android:id="@+id/changeImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下一张图片" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
     
 </LinearLayout>
